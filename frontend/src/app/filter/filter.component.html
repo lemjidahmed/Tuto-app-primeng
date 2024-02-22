@@ -1,0 +1,53 @@
+<!--<div class="filter-component">-->
+<!--  <span>Filter:   </span>-->
+<!--  <label class="mr-2">-->
+<!--    <input type="radio" name="filter" value="all"-->
+<!--    [(ngModel)]="selectedRadioButtonValue"-->
+<!--    (change)="onRadioButtonSelectionChanged()">-->
+<!--    {{'All('+all+')'}}-->
+<!--  </label>-->
+<!--  <label class="mr-2">-->
+<!--    <input type="radio" name="filter" value="published"-->
+<!--    [(ngModel)]="selectedRadioButtonValue"-->
+<!--    (change)="onRadioButtonSelectionChanged()">-->
+<!--    {{'Published('+published+')'}}-->
+<!--  </label>-->
+<!--  <label class="mr-2">-->
+<!--    <input type="radio" name="filter" value="pending"-->
+<!--    [(ngModel)]="selectedRadioButtonValue"-->
+<!--    (change)="onRadioButtonSelectionChanged()">-->
+<!--    {{'Pending('+pending+')'}}-->
+<!--  </label>-->
+<!--</div>-->
+
+
+<!--<div class="field-radiobutton-inline">-->
+<!--  <div class="field-radiobutton">-->
+<!--    <p-radioButton name="filter" value="all" [(ngModel)]="selectedRadioButtonValue" (change)="onRadioButtonSelectionChanged()"  inputId="all"></p-radioButton>-->
+<!--    <label for="all">{{'All('+all+')'}}</label>-->
+<!--  </div>-->
+<!--  <div class="field-radiobutton">-->
+<!--    <p-radioButton name="filter" value="published" [(ngModel)]="selectedRadioButtonValue" (change)="onRadioButtonSelectionChanged()" inputId="published"></p-radioButton>-->
+<!--    <label for="published">{{'Published('+published+')'}}</label>-->
+<!--  </div>-->
+<!--  <div class="field-radiobutton">-->
+<!--    <p-radioButton name="filter" value="pending" [(ngModel)]="selectedRadioButtonValue"  (change)="onRadioButtonSelectionChanged()" inputId="pending"></p-radioButton>-->
+<!--    <label for="pending">{{'Pending('+pending+')'}}</label>-->
+<!--  </div>-->
+<!--</div>-->
+
+<h5>Filter:</h5>
+<div class="field-radiobutton-inline">
+  <div class="field-radiobutton">
+    <p-radioButton name="filter" value="all" [(ngModel)]="selectedRadioButtonValue" (change)="onRadioButtonSelectionChanged()"  inputId="all"></p-radioButton>
+    <label for="all" class="ml-2">{{'All('+all+')'}}</label>
+  </div>
+  <div class="field-radiobutton">
+    <p-radioButton name="filter" value="published" [(ngModel)]="selectedRadioButtonValue" (change)="onRadioButtonSelectionChanged()" inputId="published"></p-radioButton>
+    <label for="published" class="ml-2">{{'Published('+published+')'}}</label>
+  </div>
+  <div class="field-radiobutton">
+    <p-radioButton name="filter" value="pending" [(ngModel)]="selectedRadioButtonValue"  (change)="onRadioButtonSelectionChanged()" inputId="pending"></p-radioButton>
+    <label for="pending" class="ml-2">{{'Pending('+pending+')'}}</label>
+  </div>
+</div>

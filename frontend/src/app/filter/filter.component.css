@@ -1,0 +1,10 @@
+.field-radiobutton-inline {
+  display: flex; /* Set the container to use flexbox layout */
+  flex-direction: row; /* Arrange the children in a row */
+}
+
+.field-radiobutton {
+  display: flex; /* Set the child div to use flexbox layout */
+  align-items: center; /* Align the items vertically */
+  margin-right: 10px; /* Add some spacing between the radio buttons */
+}

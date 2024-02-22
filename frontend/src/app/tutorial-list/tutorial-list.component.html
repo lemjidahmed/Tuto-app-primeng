@@ -1,0 +1,57 @@
+<div class="list row">
+  <div class="col-md-8">
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search by title"
+        [(ngModel)]="title"
+      />
+      <div class="input-group-append">
+        <button
+          class="btn btn-outline-secondary"
+          (click)="searchTitle()"
+        >
+          Search
+        </button>
+      </div>
+    </div>
+    <div class="input-group-append">
+      <app-filter
+        [all]="getAllTutorialsCount()"
+        [published]="getPublishedTutorialsCount()"
+        [pending]="getPendingTutorialsCount()"
+        (filterRadioButtonSelectionChanged)="changeSelectedTutorials($event)"
+      ></app-filter>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <h5>Tutorials List</h5>
+    <div   *ngIf="selectedTutorials==='all'; else filtered">
+    <p-listbox  [options]="tutorials"   [(ngModel)]="currentTutorial" optionLabel="title" [style]="{'width':'30rem'}">
+    </p-listbox>
+    </div>
+
+    <ng-template  #filtered>
+      <p-listbox  [options]="filteredTutorials"   [(ngModel)]="currentTutorial" optionLabel="title" [style]="{'width':'30rem'}">
+      </p-listbox>
+    </ng-template>
+
+
+<!--    <button class="m-3 btn btn-sm btn-danger" (click)="removeAllTutorials()">-->
+<!--      Remove All-->
+<!--    </button>-->
+
+  <button pButton pRipple label="Delete All" icon="pi pi-trash" (click)="removeAllTutorials()" class="p-button-danger mt-3"></button>
+
+
+  </div>
+  <div class="col-md-6">
+    <app-tutorial-details
+      [changeView]="false"
+      [currentTutorial]="currentTutorial"
+    ></app-tutorial-details>
+  </div>
+</div>
+
+
